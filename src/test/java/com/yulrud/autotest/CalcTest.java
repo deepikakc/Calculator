@@ -3,12 +3,12 @@ package com.yulrud.autotest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class CalcTest extends TestRunner{
+public class CalcTest extends TestRunner {
 
     private static final Calc calculator = new Calc();
 
     @Test
-    public void addTest(){
+    public void addTest() {
         Assert.assertEquals(calculator.add(10.001, 20.031), 30.032, 0);
         Assert.assertEquals(calculator.add(-10.001, 20.031), 10.03, 0);
         Assert.assertEquals(calculator.add(-10.001, -20.031), -30.032, 0);
@@ -17,7 +17,7 @@ public class CalcTest extends TestRunner{
     }
 
     @Test
-    public void subtractTest(){
+    public void subtractTest() {
         Assert.assertEquals(calculator.subtract(-10.001, 20.031), -30.032, 0);
         Assert.assertEquals(calculator.subtract(-10.001, -20.031), 10.03, 0);
         Assert.assertEquals(calculator.subtract(10.001, 20.031), -10.03, 0);
@@ -26,7 +26,7 @@ public class CalcTest extends TestRunner{
     }
 
     @Test
-    public void multiplyTest(){
+    public void multiplyTest() {
         Assert.assertEquals(calculator.multiply(0.0001, 222.3), 0.02223, 0);
         Assert.assertEquals(calculator.multiply(-222.3, -0.0001), 0.02223, 0);
         Assert.assertEquals(calculator.multiply(-222.3, 0.0001), -0.02223, 0);
@@ -36,11 +36,11 @@ public class CalcTest extends TestRunner{
     }
 
     @Test
-    public void divideTest(){
+    public void divideTest() {
         Assert.assertEquals(calculator.divide(10, 3), 3.3333333333333335, 0);
-        Assert.assertEquals(calculator.divide(-10, -2000),0.005,0);
+        Assert.assertEquals(calculator.divide(-10, -2000), 0.005, 0);
         Assert.assertEquals(calculator.divide(-10, 6), -1.6666666666666667, 0);
-        Assert.assertEquals(calculator.divide(100000, -0.2),-500000, 0);
+        Assert.assertEquals(calculator.divide(100000, -0.2), -500000, 0);
         Assert.assertEquals(calculator.divide(0, -0.0001), 0, 0);
 //        Assert.assertEquals(calculator.divide(222.3, 0), Infinity, 0);
     }
@@ -52,32 +52,32 @@ public class CalcTest extends TestRunner{
     }
 
     @Test
-    public void calculateVarTestSum(){
-        Assert.assertEquals(calculator.calculateVar("+",3, 2), 5, 0);
+    public void calculateVarTestSum() {
+        Assert.assertEquals(calculator.calculateVar("+", 3, 2), 5, 0);
     }
 
     @Test
-    public void calculateVarTestSubstract(){
-        Assert.assertEquals(calculator.calculateVar("-",3, 2), 1, 0);
+    public void calculateVarTestSubstract() {
+        Assert.assertEquals(calculator.calculateVar("-", 3, 2), 1, 0);
     }
 
     @Test
-    public void calculateVarTestMultiply(){
-        Assert.assertEquals(calculator.calculateVar("*",3, 2), 6, 0);
+    public void calculateVarTestMultiply() {
+        Assert.assertEquals(calculator.calculateVar("*", 3, 2), 6, 0);
     }
 
     @Test
-    public void calculateVarTestDivide(){
-        Assert.assertEquals(calculator.calculateVar("/",3, 2), 1.5, 0);
+    public void calculateVarTestDivide() {
+        Assert.assertEquals(calculator.calculateVar("/", 3, 2), 1.5, 0);
     }
 
     @Test
-    public void calculateVarTestMod(){
-        Assert.assertEquals(calculator.calculateVar("%",3, 2), 1, 0);
+    public void calculateVarTestMod() {
+        Assert.assertEquals(calculator.calculateVar("%", 3, 2), 1, 0);
     }
 
     @Test
-    public void calculateVarTestOtherSign(){
-        Assert.assertEquals(calculator.calculateVar("ju",3, 2), 0, 0);
+    public void calculateVarTestOtherSign() {
+        Assert.assertEquals(calculator.calculateVar("ju", 3, 2), 0, 0);
     }
 }

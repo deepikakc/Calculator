@@ -5,7 +5,8 @@ import java.util.Scanner;
 public class InputCalc {
 
     private Scanner input;
-    InputCalc(){
+
+    InputCalc() {
         input = new Scanner(System.in);
     }
 
